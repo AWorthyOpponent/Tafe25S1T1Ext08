@@ -90,5 +90,10 @@ namespace Calculator
 				Utils.Utils.handleBackspace();
 			}
 		}
+
+		private void titleText_SelectionChanged(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }
