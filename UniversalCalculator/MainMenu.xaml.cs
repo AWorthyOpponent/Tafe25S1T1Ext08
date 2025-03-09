@@ -37,5 +37,9 @@ namespace Calculator
 			Application.Current.Exit();
 		}
 
+		private void CurrencyConverterButton_Click(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(CurrencyConverter));
+		}
 	}
 }
