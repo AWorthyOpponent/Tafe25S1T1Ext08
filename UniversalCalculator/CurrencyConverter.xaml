@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Calculator.CurrencyConverter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<Grid Background="White" Padding="20" HorizontalAlignment="Center" VerticalAlignment="Center" Height="378">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto"/>
+			<ColumnDefinition Width="Auto"/>
+			<ColumnDefinition Width="Auto"/>
+		</Grid.ColumnDefinitions>
+
+		<!-- Title -->
+		<TextBlock Text="Currency Conversion Calculator"
+				   FontSize="28"
+				   FontWeight="Bold"
+				   Foreground="Black"
+				   Grid.Row="0" Grid.ColumnSpan="3"
+				   HorizontalAlignment="Center"
+				   Margin="0,0,0,20"/>
+
+		<!-- Headers -->
+		<TextBlock Text="Amount $" FontSize="18" FontWeight="SemiBold" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center"/>
+		<TextBlock Text="From" FontSize="18" FontWeight="SemiBold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"/>
+		<TextBlock Text="To" FontSize="18" FontWeight="SemiBold" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center"/>
+
+		<!-- Inputs -->
+		<TextBox x:Name="amountTextBox" Grid.Row="2" Grid.Column="0" Width="120" Height="30" FontSize="16" HorizontalAlignment="Center"/>
+		<ComboBox x:Name="fromCurrencyComboBox" Grid.Row="2" Grid.Column="1" Width="150" Height="30" FontSize="16" HorizontalAlignment="Center"/>
+		<ComboBox x:Name="toCurrencyComboBox" Grid.Row="2" Grid.Column="2" Width="150" Height="30" FontSize="16" HorizontalAlignment="Center"/>
+
+		<!-- Conversion Result -->
+		<TextBlock x:Name="conversionResultText"
+				   FontSize="20"
+				   FontWeight="Bold"
+				   Foreground="Black"
+				   Grid.Row="3" Grid.ColumnSpan="3"
+				   HorizontalAlignment="Center"
+				   Margin="0,20,0,10"/>
+
+		<!-- Conversion Rate Info -->
+		<TextBlock x:Name="rateInfoText"
+				   FontSize="14"
+				   Foreground="Gray"
+				   TextWrapping="Wrap"
+				   TextAlignment="Center"
+				   Width="300"
+				   Grid.Row="4" Grid.ColumnSpan="3"
+				   HorizontalAlignment="Center"
+				   Margin="0,20,0,10"/>
+
+		<!-- Buttons -->
+		<StackPanel Grid.Row="6" Grid.ColumnSpan="3" Orientation="Vertical" HorizontalAlignment="Center" Margin="0,20,0,0">
+			<Button x:Name="convertButton"
+					Content="Currency Conversion"
+					Background="LightGray"
+					FontSize="18"
+					Width="220" Height="50"
+					Margin="0,5,0,5"
+					Click="ConvertButton_Click"/>
+			<Button x:Name="exitButton"
+					Content="Exit"
+					Background="LightGray"
+					FontSize="18"
+					Width="220" Height="50"
+					Click="ExitButton_Click" RenderTransformOrigin="0.504,1.616"/>
+		</StackPanel>
+	</Grid>
+</Page>
