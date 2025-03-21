@@ -37,10 +37,12 @@ namespace Calculator
 			Application.Current.Exit();
 		}
 
-		private void UnitsConverterButton_Click(object sender, RoutedEventArgs e)
+		private void MortgageCalculatorButton_Click(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(MortgageCalculator));
+		}
+    }		private void UnitsConverterButton_Click(object sender, RoutedEventArgs e)
 		{
 			Frame.Navigate(typeof(UnitsConverter));
 		}
-
-	}
-}
+    }}

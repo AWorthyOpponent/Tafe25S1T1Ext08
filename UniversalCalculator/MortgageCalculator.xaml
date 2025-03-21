@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Calculator.MortgageCalculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+		<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+
+			<!-- Title -->
+			<TextBlock Text="Mortgage Calculator" FontSize="24" FontWeight="Bold" 
+       HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+			<!-- Principal Amount -->
+			<TextBlock Text="Principal Borrow ($):"/>
+			<TextBox Name="principalAmountTextBox" Text="1000000" FontSize="16"/>
+
+			<!-- Loan Duration -->
+			<TextBlock Text="Years:"/>
+			<TextBox Name="durationYearsTextBox" Text="30" FontSize="16"/>
+
+			<TextBlock Text="and Months:"/>
+			<TextBox Name="durationMonthsTextBox" Text="0" FontSize="16"/>
+
+			<!-- Annual Interest Rate -->
+			<TextBlock Text="Yearly Interest Rate (%):"/>
+			<TextBox Name="annualInterestTextBox" Text="3.5" FontSize="16"/>
+
+			<!-- Display Calculated Monthly Interest Rate -->
+			<TextBlock Text="Monthly Interest Rate (%):"/>
+			<TextBox Name="monthlyInterestTextBox" IsReadOnly="True" FontSize="16"/>
+
+			<!-- Display Monthly Repayment -->
+			<TextBlock Text="Monthly Repayment ($):"/>
+			<TextBox Name="monthlyRepaymentTextBox" IsReadOnly="True" FontSize="16"/>
+
+			<!-- Buttons -->
+			<Button Name="calculateButton" Content="Calculate" 
+        FontSize="16" Padding="5" Margin="0,10,0,5" Background="#CCCCCC" Click="calculateButton_Click"/>
+
+			<Button Name="clearButton" Content="Clear"
+        FontSize="16" Padding="5" Margin="0,10,0,5" Background="#FFDDDD" Click="clearButton_Click"/>
+
+			<Button Name="exitButton" Content="Exit"
+        FontSize="16" Padding="5" Margin="0,10,0,5" Background="#CCCCCC" Click="exitButton_Click" />
+		</StackPanel>
+
+    </Grid>
+</Page>
