@@ -36,5 +36,11 @@ namespace Calculator
 		{
 			Application.Current.Exit();
 		}
+
+		private void UnitsConverterButton_Click(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(UnitsConverter));
+		}
+
 	}
 }
