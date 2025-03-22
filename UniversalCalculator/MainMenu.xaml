@@ -34,7 +34,7 @@
 			<Button x:Name="CurrencyConverterButton" Content="Currency Converter" Width="250" Height="60" Background="#C4B79E" Margin="0,10,0,0" Click="CurrencyConverterButton_Click" />
 			
 			<Button x:Name="UnitConverterButton" Content="Unit Converter" Width="250" Height="60" Background="#C4B79E" Margin="0,10,0,0" Click="UnitsConverterButton_Click" />
-			
+			<Button x:Name="TripCalculatorButton" Content="Trip Calculator" Width="250" Height="60" Background="#C4B79E" Margin="0,10,0,0" Click="TripCalculatorButton_Click" />
 			<Button x:Name="ExitButton" Content="Exit" Width="250" Height="60" Background="#C4B79E" Margin="0,10,0,0" Click="ExitButton_Click"/>
 			
 		</StackPanel>

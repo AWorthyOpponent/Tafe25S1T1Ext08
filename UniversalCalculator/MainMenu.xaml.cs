@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Popups;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -41,6 +42,12 @@ namespace Calculator
 		private void CurrencyConverterButton_Click(object sender, RoutedEventArgs e)
 		{
 			Frame.Navigate(typeof(CurrencyConverter));
+		}
+
+		private async void TripCalculatorButton_Click(object sender, RoutedEventArgs e)
+		{
+			var messageDialog = new MessageDialog("Trip calculator C# code will be developed later.");
+			await messageDialog.ShowAsync();
 		}
 
 
